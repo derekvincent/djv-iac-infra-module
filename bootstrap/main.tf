@@ -14,7 +14,7 @@ locals {
 }
 
 ## Bucket Setup 
-resource "aws_s3_bucket" "terraform_state" {
+resource "aws_s3_bucket" "terraform_state" { #tfsec:ignore:AWS002
   bucket = local.bucket_name
 
   # Enable versioning so we can see the full revision history of our

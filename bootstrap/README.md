@@ -23,6 +23,4 @@ A table is created with the LockId key field to be used to lock the states files
 -[] 
 
 
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

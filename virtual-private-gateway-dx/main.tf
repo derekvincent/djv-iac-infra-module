@@ -37,5 +37,5 @@ resource "aws_dx_gateway_association_proposal" "default" {
   dx_gateway_id               = var.dx_gateway_id
   dx_gateway_owner_account_id = var.dx_gateway_account_id
   associated_gateway_id       = aws_vpn_gateway.dx_vgw.id
-  allowed_prefixes            = [data.vpc_id.selected.cidr_block]
+  allowed_prefixes            = [data.aws_vpc.selected.cidr_block]
 }

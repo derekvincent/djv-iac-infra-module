@@ -1,7 +1,7 @@
 ##
 
 locals {
-  vpg_name = join("-", [var.namespace, var.name, var.environment, "dx", var.amazon_side_asn, "vgw"])
+  vgw_name = join("-", [var.namespace, var.name, var.environment, "dx", var.amazon_side_asn, "vgw"])
 
   tag_name_env      = join(":", [var.namespace, "environment"])
   tag_name_customer = join(":", [var.namespace, "customer"])
@@ -22,7 +22,7 @@ resource "aws_vpn_gateway" "dx_vgw" {
   tags = merge(
     local.common_tags,
     map(
-      "Name", local.twg_name
+      "Name", local.vgw_name
     )
   )
 }

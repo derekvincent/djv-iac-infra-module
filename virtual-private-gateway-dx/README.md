@@ -23,7 +23,7 @@ No requirements.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| amazon\_side\_asn | The BGP ASN to assign to the Virtual Private Gateway. | `string` | `"4512"` | no |
+| amazon\_side\_asn | The BGP ASN to assign to the Virtual Private Gateway. | `string` | `"64512"` | no |
 | customer | Customer (internal/external) Name - billing tag | `string` | n/a | yes |
 | dx\_gateway\_account\_id | The Account ID of the Direct Connect Gateway to attach to. | `string` | n/a | yes |
 | dx\_gateway\_id | The Direct Connect Gateway ID to attach to. | `string` | n/a | yes |

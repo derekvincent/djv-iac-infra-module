@@ -7,7 +7,7 @@ variable "vpc_id" {
 variable "amazon_side_asn" {
   description = "The BGP ASN to assign to the Virtual Private Gateway."
   type        = string
-  default     = "4512"
+  default     = "64512"
 }
 
 variable "route_table_ids" {

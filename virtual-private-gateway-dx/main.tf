@@ -30,7 +30,7 @@ resource "aws_vpn_gateway" "dx_vgw" {
 resource "aws_vpn_gateway_route_propagation" "default" {
   count          = length(var.route_table_ids)
   vpn_gateway_id = aws_vpn_gateway.dx_vgw.id
-  route_table_id = var.route_table_ids[index]
+  route_table_id = var.route_table_ids[count.index]
 }
 
 resource "aws_dx_gateway_association_proposal" "default" {

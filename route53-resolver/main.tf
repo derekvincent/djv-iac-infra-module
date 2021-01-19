@@ -50,6 +50,14 @@ resource "aws_security_group" "resolver_endpoint" {
     cidr_blocks = local.dns_cidr_list
   }
 
+  ingress {
+    description = "ICMP fom  On-Premise Server"
+    from_port   = -1
+    to_port     = -1
+    protocol    = "ICMP"
+    cidr_blocks = local.dns_cidr_list
+  }
+
   egress {
     description = "DNS (UDP) to On-Premise Server"
     from_port   = 53

@@ -1,6 +1,6 @@
 locals {
-  cgw_name = join("-", [var.namespace, var.name, var.environment, "cgw"])
-  vpn_name = join("-", [var.namespace, var.name, var.environment, "vpn"])
+  cgw_name = join("-", [var.namespace, var.name, var.environment, var.target, "cgw"])
+  vpn_name = join("-", [var.namespace, var.name, var.environment, var.target, "vpn"])
 
   tag_name_env      = join(":", [var.namespace, "environment"])
   tag_name_customer = join(":", [var.namespace, "customer"])

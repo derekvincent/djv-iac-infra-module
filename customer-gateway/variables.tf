@@ -22,10 +22,15 @@ variable "customer" {
 
 variable "region" {
   description = "AWS region"
+  type        = string
   default     = "us-east-1"
 }
 
 
+variable "target" {
+  description = "The VPN partner or target name being deployed for."
+  type        = string
+}
 variable "bgp_asn" {
   description = "BGP ASN"
   type        = string

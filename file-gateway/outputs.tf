@@ -9,3 +9,8 @@ output "ami_id" {
 output "sg_name" {
   value = local.security_group_name
 }
+
+output "fqdn" {
+  description = "The fully qualified domain name."
+  value       = join(".", [var.gateway_name, var.gateway_domain])
+}

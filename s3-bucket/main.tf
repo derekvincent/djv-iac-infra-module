@@ -13,7 +13,7 @@ locals {
 
 ## Bucket Setup 
 resource "aws_s3_bucket" "bucket" {
-  bucket = local.bucket_name
+  bucket = local.bucket_name #tfsec:ignore:AWS002
 
   versioning {
     enabled = var.enable_versioning

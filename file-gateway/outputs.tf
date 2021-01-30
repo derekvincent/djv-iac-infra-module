@@ -14,3 +14,12 @@ output "fqdn" {
   description = "The fully qualified domain name."
   value       = join(".", [var.gateway_name, var.gateway_domain])
 }
+
+output "file_gateway_arn" {
+  description = "The arn of the file gateway."
+  value       = aws_storagegateway_gateway.file_gateway.id
+}
+
+output "file_gateway_role_arn" {
+  value = aws_iam_role.file_gateway.arn
+}

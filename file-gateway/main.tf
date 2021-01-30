@@ -1,39 +1,3 @@
-##
-# 1. Create the Security Group 
-#   - VPC
-#   - Services to allow:
-#       - HTTP: 80 
-#           inbound: local mgmt networks /
-#           outbound: 0.0.0.0 /
-#       - HTTPS: 443
-#           inbound: local mgmt networks /
-#           outbound: 0.0.0.0 /
-#       - DNS: 53
-#           outbound: DNS servers (local network) /
-#       - NTP: 123
-#           outbound: 0.0.0.0 /
-#       - NFS V4: 2049
-#           inbound: mount sources/subnets
-#       - NFS V3: 111, 20048
-#           inbound: mount sources/subnets
-#       - SMB V2: 139
-#           inbound: mount sources/subnets
-#       - SMB V3: 445
-#           inbound: mount sources/subnets
-#       - Active Directory: 137, 138, 389, 636
-#           outbound: AD servers /
-#           inbound: AD servers /
-#
-# 2. IAM Policy for the Storage Gateway 
-#    Includes a list of Buckets that it should have access to 
-# 3. Provision the Instance 
-#   - VPC
-#   - Subnet
-#   - Instance Type
-#   - Security Group (Created here)
-#   - Key name
-#   - AMI 
-
 locals {
 
   name                = var.sname != "" ? lower(join("-", ["file-gateway", var.sname])) : "file-gateway"

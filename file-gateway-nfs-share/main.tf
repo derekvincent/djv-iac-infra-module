@@ -1,7 +1,6 @@
 locals {
 
-  name          = var.sname != "" ? lower(join("-", ["file-gateway", var.sname])) : "nfs-share"
-  instance_name = lower(join("-", [var.namespace, var.name, var.environment, local.name]))
+  share_name = lower(join("-", [var.namespace, var.name, var.environment, trimprefix(trimprefix(var.file_share_name, var.environment), "-"), "nfs-share"]))
 
   notification_policy = var.notification_time == 0 ? jsonencode({ "Upload" : { "SettlingTimeInSeconds" : var.notification_time } }) : "{}"
 
@@ -37,4 +36,11 @@ resource "aws_storagegateway_nfs_file_share" "shares" {
   cache_attributes {
     cache_stale_timeout_in_seconds = var.cache_ttl
   }
+
+  tags = merge(
+    local.common_tags,
+    map(
+      "Name", local.share_name
+    )
+  )
 }

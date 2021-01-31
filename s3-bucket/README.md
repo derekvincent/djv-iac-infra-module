@@ -1,5 +1,5 @@
 
-Text
+test
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
@@ -21,6 +21,7 @@ No requirements.
 | bucket\_name | The bucket postfix name or full named based on the custom\_bucket\_name setting. | `string` | n/a | yes |
 | custom\_bucket\_name | If set to false then the bucket\_name will have the standard determined prefix applied. If it is set to true then the only provided bucket name will be used. default: false | `bool` | `false` | no |
 | customer | Customer Name - billing tag | `string` | n/a | yes |
+| enable\_versioning | Enable bucket versioning; default: false | `bool` | `false` | no |
 | environment | Environment - eg. 'sbx', 'dev','qa','prod' | `string` | `""` | no |
 | ignore\_public\_acls | Ignore Public acls; default: true | `bool` | `true` | no |
 | name | Name | `string` | n/a | yes |
@@ -32,9 +33,8 @@ No requirements.
 
 | Name | Description |
 |------|-------------|
-| bucket\_arn | n/a |
-| bucket\_domain\_name | n/a |
-| bucket\_name | n/a |
-| bucket\_role\_arn | n/a |
+| bucket\_arn | S3 state arn |
+| bucket\_id | S3 state bucket id |
+| bucket\_name | S3 state bucket domain name |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

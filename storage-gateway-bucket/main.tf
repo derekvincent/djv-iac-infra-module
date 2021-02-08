@@ -84,7 +84,7 @@ data "aws_iam_policy_document" "s3_shared_account" {
     ]
     principals {
       type        = "AWS"
-      identifiers = format("arn:aws:iam::%s:root", var.shared_bucket_id)
+      identifiers = format("arn:aws:iam::%s:root", var.shared_account_id)
     }
     resources = [format("arn:aws:s3:::%s", local.bucket_name)]
   }

@@ -25,7 +25,7 @@ locals {
 resource "aws_s3_bucket" "storage_gateway" {
   bucket = local.bucket_name #tfsec:ignore:AWS002
   acl    = "private"
-  policy = local.is_shared_account ? data.aws_iam_policy_document.s3_shared_account.json : {}
+  policy = local.is_shared_account ? data.aws_iam_policy_document.s3_shared_account.json : jsonencode({})
 
   # Enable server-side encryption by default
   server_side_encryption_configuration {

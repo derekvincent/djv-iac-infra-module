@@ -8,6 +8,8 @@ locals {
   role_name   = join("-", [local.bucket_name, "file-gateway", "role"])
   policy_name = join("-", [local.bucket_name, "file-gateway", "policy"])
 
+  is_shared_account = var.shared_account_id == "" ? false : true
+
   tag_name_env         = join(":", [var.namespace, "environment"])
   tag_name_customer    = join(":", [var.namespace, "customer"])
   tag_name_application = join(":", [var.namespace, "application"])
@@ -23,6 +25,7 @@ locals {
 resource "aws_s3_bucket" "storage_gateway" {
   bucket = local.bucket_name #tfsec:ignore:AWS002
   acl    = "private"
+  policy = local.is_shared_account ? data.aws_iam_policy_document.s3_shared_account.json : {}
 
   # Enable server-side encryption by default
   server_side_encryption_configuration {
@@ -60,4 +63,29 @@ resource "aws_s3_bucket_public_access_block" "default" {
   ignore_public_acls      = var.ignore_public_acls
   block_public_policy     = var.block_public_policy
   restrict_public_buckets = var.restrict_public_buckets
+}
+
+data "aws_iam_policy_document" "s3_shared_account" {
+
+  statement {
+    effect = "Allow"
+    actions = [
+      "s3:CreateBucket",
+      "s3:GetBucketLocation",
+      "s3:GetObject",
+      "s3:PutObject",
+      "s3:PutObjectRetention",
+      "s3:PutObjectTagging",
+      "s3:ListBucket",
+      "s3:ListAllMyBuckets",
+      "s3:DeleteObject",
+      "s3:GetObjectAcl",
+      "s3:PutObjectAcl"
+    ]
+    principals {
+      type        = "AWS"
+      identifiers = format("arn:aws:iam::%s:root", var.shared_bucket_id)
+    }
+    resources = [format("arn:aws:s3:::%s", local.bucket_name)]
+  }
 }

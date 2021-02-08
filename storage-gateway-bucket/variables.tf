@@ -45,6 +45,11 @@ variable "custom_bucket_name" {
 #   type        = bool
 #   default     = false
 # }
+variable "shared_account_id" {
+  description = "The account id that will also be allowed to access the buckets. Used to allow a file gateway from anohter account access."
+  type        = string
+  default     = ""
+}
 
 variable "block_public_acls" {
   description = "Block Public acls; default: true"

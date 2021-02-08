@@ -27,6 +27,7 @@ No requirements.
 | namespace | Namespace - 'clk' or 'clklab' | `string` | `""` | no |
 | region | AWS region | `string` | `"us-east-1"` | no |
 | restrict\_public\_buckets | Restrict Public buckets; default: true | `bool` | `true` | no |
+| shared\_account\_id | The account id that will also be allowed to access the buckets. Used to allow a file gateway from anohter account access. | `string` | `""` | no |
 
 ## Outputs
 

@@ -10,7 +10,7 @@ data "aws_iam_policy_document" "policy_document" {
     ]
 
     resources = [
-      "${aws_s3_bucket.storage_gateway.arn}",
+      aws_s3_bucket.storage_gateway.arn,
     ]
 
     effect = "Allow"

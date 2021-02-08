@@ -70,17 +70,12 @@ data "aws_iam_policy_document" "s3_shared_account" {
   statement {
     effect = "Allow"
     actions = [
-      "s3:CreateBucket",
+      "s3:GetAccelerateConfiguration",
       "s3:GetBucketLocation",
-      "s3:GetObject",
-      "s3:PutObject",
-      "s3:PutObjectRetention",
-      "s3:PutObjectTagging",
+      "s3:GetBucketVersioning",
       "s3:ListBucket",
-      "s3:ListAllMyBuckets",
-      "s3:DeleteObject",
-      "s3:GetObjectAcl",
-      "s3:PutObjectAcl"
+      "s3:ListBucketVersions",
+      "s3:ListBucketMultipartUploads",
     ]
     principals {
       type        = "AWS"
@@ -88,4 +83,25 @@ data "aws_iam_policy_document" "s3_shared_account" {
     }
     resources = [format("arn:aws:s3:::%s", local.bucket_name)]
   }
+
+  statement {
+    effect = "Allow"
+    actions = [
+      "s3:AbortMultipartUpload",
+      "s3:DeleteObject",
+      "s3:DeleteObjectVersion",
+      "s3:GetObject",
+      "s3:GetObjectAcl",
+      "s3:GetObjectVersion",
+      "s3:ListMultipartUploadParts",
+      "s3:PutObject",
+      "s3:PutObjectAcl",
+    ]
+    principals {
+      type        = "AWS"
+      identifiers = [format("arn:aws:iam::%s:root", var.shared_account_id)]
+    }
+    resources = [format("arn:aws:s3:::%s/*", local.bucket_name)]
+  }
+
 }

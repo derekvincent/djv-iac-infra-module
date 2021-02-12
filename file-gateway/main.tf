@@ -231,6 +231,10 @@ resource "aws_instance" "file_gateway" {
       local.tag_name_hostname, join(".", [var.gateway_name, var.gateway_domain]),
     )
   )
+
+  lifecycle {
+    ignore_changes = ["ami"] ## If the latest AMI change we do not want to redeploy a new instance.
+  }
 }
 
 data "aws_subnet" "default" {

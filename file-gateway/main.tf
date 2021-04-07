@@ -233,7 +233,7 @@ resource "aws_instance" "file_gateway" {
   )
 
   lifecycle {
-    ignore_changes = ["ami"] ## If the latest AMI change we do not want to redeploy a new instance.
+    ignore_changes = [ami] ## If the latest AMI change we do not want to redeploy a new instance.
   }
 }
 

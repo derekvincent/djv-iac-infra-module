@@ -11,6 +11,16 @@ No requirements.
 |------|---------|
 | aws | n/a |
 
+## Modules
+
+No Modules.
+
+## Resources
+
+| Name |
+|------|
+| [aws_storagegateway_nfs_file_share](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/storagegateway_nfs_file_share) |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -33,9 +43,9 @@ No requirements.
 | region | AWS region | `string` | `"us-east-1"` | no |
 | role\_arn | The rle arn that the storage gateway uses to access the bucket. | `string` | n/a | yes |
 | sname | Specific name used in the nameing/tagging to distiguish multiple object of the same type. | `string` | `""` | no |
+| squash | Maps a user to anonymous user. Defaults to AllSquash. Valid values: RootSquash (only root is mapped to anonymous user), NoSquash (no one is mapped to anonymous user), AllSquash (everyone is mapped to anonymous user) | `string` | `"AllSquash"` | no |
 
 ## Outputs
 
 No output.
-
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->

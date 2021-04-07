@@ -24,6 +24,7 @@ resource "aws_storagegateway_nfs_file_share" "shares" {
   file_share_name         = var.file_share_name
   default_storage_class   = var.default_storage_class
   guess_mime_type_enabled = true
+  squash                  = var.squash
   notification_policy     = local.notification_policy
 
   nfs_file_share_defaults {

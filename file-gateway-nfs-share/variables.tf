@@ -98,3 +98,9 @@ variable "owner_id" {
   type        = string
   default     = "65534"
 }
+
+variable "squash" {
+  description = "Maps a user to anonymous user. Defaults to AllSquash. Valid values: RootSquash (only root is mapped to anonymous user), NoSquash (no one is mapped to anonymous user), AllSquash (everyone is mapped to anonymous user)"
+  type        = string
+  default     = "AllSquash"
+}

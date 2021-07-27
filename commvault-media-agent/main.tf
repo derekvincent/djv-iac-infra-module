@@ -19,6 +19,7 @@ locals {
 ## EC2 Instance
 ##
 resource "aws_instance" "commvault_media_agent" {
+  #tfsec:ignore:AWS079
   ami                         = var.ec2_ami
   instance_type               = var.ec2_instance_type
   iam_instance_profile        = var.iam_instance_profile

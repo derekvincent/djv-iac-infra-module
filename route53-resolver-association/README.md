@@ -1,5 +1,6 @@
+# Route53 Resolver Rule Associations
 
-test
+Associate additional VPC (with the Route53 and Resolvers in it) with the Route53 rule sets to be able to route DNS requests to and from on-premise DNS. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

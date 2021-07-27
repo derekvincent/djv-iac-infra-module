@@ -1,5 +1,6 @@
+# Route53 Zone
 
-test
+Creates a Private Route53 zone and attaches the default VPC to it. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

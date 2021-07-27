@@ -1,6 +1,9 @@
+# Subnets
 
-test
+Provisions a set of subnets that can either be Public or Private based in the specificied VPC and AZs. 
 
+Provides the ability to provisiion a NAT gateway (public subnets) and setups up route tables.
+ 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
 

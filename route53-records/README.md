@@ -1,5 +1,7 @@
+# Route53 Record
 
-test
+Manage Route53 DNS records in the created zones. Provides the ability to create an a, cname and reverse record in-addr.arpa. 
+
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

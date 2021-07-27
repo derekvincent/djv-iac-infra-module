@@ -1,5 +1,5 @@
-
-Text
+# Storage Gateway S3 Bucket
+Creates a S3 Bucket that can be used as a target for a File Gateway share. Supports buckets that maybe in seperate accounts then the storage gateway with an cross-account IAM role. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

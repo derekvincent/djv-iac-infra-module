@@ -1,5 +1,5 @@
-
-test
+# S3 Bucket
+Allows for the creation of an S3 bucket. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

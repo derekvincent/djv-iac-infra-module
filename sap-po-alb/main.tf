@@ -24,11 +24,11 @@ locals {
 
 }
 
+#tfsec:ignore:AWS005 tfsec:ignore:AWS083
 resource "aws_lb" "default" {
-  name    = var.lb_name
-  subnets = var.subnet_ids
-  #tfsec:ignore:AWS005
-  internal           = var.internal
+  name               = var.lb_name
+  subnets            = var.subnet_ids
+  internal           = var.internal #tfsec:ignore:AWS005
   security_groups    = local.alb_security_groups
   load_balancer_type = "application"
   enable_http2       = var.enable_http2

@@ -1,4 +1,5 @@
-
+# File Gateway - NFS Share
+Creates an NFS based share against the specificed File Gateway. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

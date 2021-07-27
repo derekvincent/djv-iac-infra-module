@@ -1,5 +1,5 @@
-
-test
+# Route53 Zone Association
+Manage the associaiton between addational VPC's and the Route53 domain. Allows for VPC's in other accout to be part of a single Route53 private domain. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

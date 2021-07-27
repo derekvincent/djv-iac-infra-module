@@ -1,5 +1,5 @@
-
-test
+### Customer Gateway with VPN attachment to Transit Gateway
+Provisions an IPSec customer gateway and creates a VPN attachment to the specified transit gateway, and related routing. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

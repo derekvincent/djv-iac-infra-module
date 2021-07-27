@@ -1,5 +1,5 @@
-
-test
+# VPC Peering
+Provisions VPC peering between VPC, handles the requestor/acceptor setting as well as default routing between peered VPC's.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

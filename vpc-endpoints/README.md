@@ -1,5 +1,6 @@
+# VPC Endpoints
 
-test
+Create a VPC endpoint, currently only support S3 endpoints.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

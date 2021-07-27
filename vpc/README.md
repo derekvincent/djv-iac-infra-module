@@ -1,5 +1,6 @@
+# Base VPC 
 
-test
+Creates a new VPC along with the default security group, route table, ACL, Internet Gateway, DHCP options. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

@@ -2,7 +2,7 @@
 
 Create inbound and outbound Route53 DNS endpoint resolvers to allow forwarding dns requests between route53 and on premise DNS server. 
 
-The module creates the end points resolvers as well as the security groups, associaitons rules and to set the resource ccess managment (RAM) share for other accounts and VPC's  can access.
+The module creates the end points resolvers as well as the security groups, associations rules and to set the resource access management (RAM) share for other accounts and VPC's  can access.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

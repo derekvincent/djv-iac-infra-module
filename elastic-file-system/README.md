@@ -1,5 +1,5 @@
 # Elastic File System (EFS)
-Provisions a EFS along with the lifcycle policy, file system policy, mount targets, specficed access points, and security group.  
+Provisions a EFS along with the lifecycle policy, file system policy, mount targets, specified access points, and security group.  
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

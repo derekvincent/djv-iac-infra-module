@@ -1,6 +1,6 @@
 # Virtual Private Gateway and Direct Connect Gateway Proposal
 
-This module will create a `Virtual Gateway` assosicate it with the VPC referenced, enables route propogation with referenced route tables and creates a association propsal to the referenced `Direct Connect Gateway`. 
+This module will create a `Virtual Gateway` associate it with the VPC referenced, enables route propagation with referenced route tables and creates a association proposal to the referenced `Direct Connect Gateway`. 
 
 ## Module Assumption 
 - The approval of the propsal is not handled in this module.

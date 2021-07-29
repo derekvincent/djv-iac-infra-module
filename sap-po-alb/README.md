@@ -1,5 +1,5 @@
-# SAP PO Appliation Load Balancer
-Allows for the provsioing of an AWS ALB along with a listener, default rule, targets, target groups, association to an certificate, security group and forward rules to a backend. 
+# SAP PO Application Load Balancer
+Allows for the provisioning of an AWS ALB along with a listener, default rule, targets, target groups, association to an certificate, security group and forward rules to a backend. 
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements

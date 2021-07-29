@@ -1,5 +1,5 @@
 # Transit Gateway/VPC routing rules
-Allows for the setting defined routing rules against a specific table and against a Transit Gateway or VPC perring connection.
+Allows for the setting defined routing rules against a specific table and against a Transit Gateway or VPC peering connection.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
